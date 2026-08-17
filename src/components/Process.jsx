@@ -29,8 +29,8 @@ export default function Process() {
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-400/30 text-cyan-400 text-xs font-mono tracking-[0.25em] uppercase">
             <span>◆ PROCESS ◆</span>
           </div>
-          <h2 className="font-serif text-4xl sm:text-6xl font-light text-white tracking-tight">
-            Development <span className="font-serif italic font-normal text-gradient-cyan">Workflow</span>
+          <h2 className="font-serif italic text-3xl sm:text-5xl font-normal text-gradient-teal tracking-tight">
+            Development Workflow
           </h2>
           <p className="text-slate-400 text-base max-w-xl mx-auto font-normal">
             A structured, 4-step approach to turning complex requirements into production-ready web applications.

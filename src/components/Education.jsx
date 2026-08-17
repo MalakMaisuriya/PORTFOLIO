@@ -22,8 +22,8 @@ export default function Education() {
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-purple-950/60 border border-purple-500/20 text-purple-400 text-xs font-semibold uppercase tracking-widest">
             <FaGraduationCap className="text-xs" /> Academic Journey
           </div>
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-            Education & <span className="text-purple-400">Certification</span>
+          <h2 className="font-serif italic text-3xl sm:text-5xl font-normal text-gradient-teal tracking-tight">
+            Education & Certification
           </h2>
           <p className="text-slate-400 text-base max-w-xl mx-auto">
             My academic qualifications and specialized full-stack development training background.

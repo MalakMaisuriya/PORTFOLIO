@@ -1,9 +1,9 @@
 export const personalDetails = {
   name: "Malak Maisuriya",
-  title: "Full Stack Developer (Aspiring)",
+  title: "Full Stack MERN Developer",
   badge: "⚡ FULL STACK DEVELOPER ⚡",
   tagline: "Transforming logic into scalable web applications.",
-  subtext: "BCA scholar mastering Full Stack MERN development, React, JavaScript, and C++ problem solving.",
+  subtext: "Full Stack MERN Developer mastering Node.js, Express, MongoDB, React, JavaScript, and C++ problem solving.",
   email: "malakmaisuriya857@gmail.com",
   phone: "+91 8160991260",
   location: "Surat, Gujarat, India",
@@ -17,17 +17,17 @@ export const personalDetails = {
 export const aboutData = {
   watermark: "निरन्तरप्रयत्नेन सर्वं साध्यं भवति", // Continuous effort accomplishes all
   paragraphs: [
-    "I am an ambitious developer who loves solving real-world challenges through code. My journey started with exploring computer applications at Vidhyadeep University, Surat, where I am currently in my BCA Final Year (Semester 5).",
-    "I specialize in building responsive, high-performance web interfaces with React JS and modern CSS frameworks. Simultaneously, I am expanding into Full Stack MERN Development (MongoDB, Express, React, Node.js) and backend architecture.",
+    "I am an ambitious Full Stack Developer who loves solving real-world challenges through code. My journey started with exploring computer applications at Vidhyadeep University, Surat, where I am currently in my BCA Final Year.",
+    "I specialize in building responsive, high-performance web applications using the Full Stack MERN Ecosystem (MongoDB, Express.js, React JS, Node.js) and backend architecture.",
     "Beyond web applications, I actively practice Data Structures and Algorithms in C++ on HackerRank to hone algorithmic efficiency. I take pride in writing clean, well-structured, and maintainable code."
   ],
   stats: [
     { label: "Projects Built", value: "15+", detail: "Real-world & Practice Repositories" },
-    { label: "BCA Final Year", value: "Sem 5", detail: "Vidhyadeep University" },
+    { label: "MERN Stack", value: "Completed", detail: "Full Stack Backend & Frontend" },
     { label: "DSA & Logic", value: "Active", detail: "HackerRank & C++ Repos" },
   ],
   achievements: [
-    "Consistent learner with strong problem-solving and analytical reasoning skills",
+    "Completed Full Stack MERN Development Professional Program at Red & White Multimedia Education",
     "Developed 15+ public GitHub repositories covering MERN, React, JavaScript, and DSA",
     "Regularly solving algorithmic challenges in C++ on HackerRank"
   ]
@@ -43,7 +43,7 @@ export const skillsData = [
       { name: "JavaScript ES6+", level: "Advanced", icon: "FaJsSquare" },
       { name: "HTML5 & CSS3", level: "Advanced", icon: "FaHtml5" },
       { name: "Bootstrap 5", level: "Advanced", icon: "FaBootstrap" },
-      { name: "jQuery", level: "Intermediate", icon: "SiJquery" },
+      { name: "jQuery", level: "Advanced", icon: "SiJquery" },
     ]
   },
   {
@@ -51,10 +51,10 @@ export const skillsData = [
     iconName: "FaServer",
     description: "Server-side routing, database architecture, and REST API development.",
     skills: [
-      { name: "Node.js", level: "In Progress", icon: "FaNodeJs" },
-      { name: "Express.js", level: "In Progress", icon: "FaNodeJs" },
-      { name: "MongoDB", level: "In Progress", icon: "SiMongodb" },
-      { name: "REST APIs", level: "Intermediate", icon: "FaCode" },
+      { name: "Node.js", level: "Advanced", icon: "FaNodeJs" },
+      { name: "Express.js", level: "Advanced", icon: "FaNodeJs" },
+      { name: "MongoDB", level: "Advanced", icon: "SiMongodb" },
+      { name: "REST APIs", level: "Advanced", icon: "FaCode" },
     ]
   },
   {
@@ -266,8 +266,8 @@ export const educationData = [
 export const certificationData = {
   title: "Full Stack Development Course",
   institute: "Red & White Multimedia Education",
-  period: "Currently Pursuing",
-  status: "Currently Pursuing",
+  period: "Completed",
+  status: "Course Completed & Certified",
   badge: "Professional Training",
   description: "Specialized training program in Full Stack Web Development covering modern MERN Stack technologies (MongoDB, Express.js, React.js, Node.js), REST APIs, database architecture, and UI design."
 };
@@ -358,7 +358,7 @@ export const courseModulesData = [
     code: "Node js, Express js, MongoDB_WEB",
     title: "Backend MERN: Node.js, Express & MongoDB",
     instructorBatch: "KEYUR-NODE JS",
-    status: "In Progress / Active",
+    status: "Completed",
     category: "Backend MERN",
     icon: "FaNodeJs",
     description: "Server-side architecture, RESTful API development, Express routing, Mongoose ORM, MongoDB database modeling, middleware, and JWT authentication."

@@ -22,8 +22,8 @@ export default function GitHubDeepDive() {
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-400/30 text-cyan-400 text-xs font-mono tracking-[0.25em] uppercase">
             <FaGithub className="text-sm text-cyan-400" /> REPOSITORY ARCHITECTURE
           </div>
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-            GitHub <span className="text-gradient-cyan italic">Deep-Dive</span>
+          <h2 className="font-serif italic text-3xl sm:text-5xl font-normal text-gradient-teal tracking-tight">
+            GitHub Deep-Dive
           </h2>
           <p className="text-slate-400 text-base max-w-xl mx-auto">
             Detailed breakdown of source code repositories built and maintained by Malak Maisuriya.

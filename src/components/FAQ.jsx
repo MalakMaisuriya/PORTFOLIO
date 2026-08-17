@@ -25,8 +25,8 @@ export default function FAQ() {
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-400/30 text-cyan-400 text-xs font-mono tracking-[0.25em] uppercase">
             <FaQuestionCircle className="text-xs" /> FREQUENTLY ASKED QUESTIONS
           </div>
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-            Got <span className="text-gradient-cyan italic">Questions?</span>
+          <h2 className="font-serif italic text-3xl sm:text-5xl font-normal text-gradient-teal tracking-tight">
+            Got Questions?
           </h2>
           <p className="text-slate-400 text-base max-w-xl mx-auto">
             Quick answers about my skills, availability, and project workflow.
