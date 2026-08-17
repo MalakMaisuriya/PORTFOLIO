@@ -10,6 +10,7 @@ import CourseCurriculum from './components/CourseCurriculum';
 import CodingProfiles from './components/CodingProfiles';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import CustomCursor from './components/CustomCursor';
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -27,6 +28,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[#061412] text-[#e6f7f2] font-sans selection:bg-[#10b981] selection:text-[#061412] antialiased overflow-x-hidden">
+      <CustomCursor />
       <AnimatePresence mode="wait">
         {isLoading && (
           <Preloader key="preloader" onComplete={() => setIsLoading(false)} />
