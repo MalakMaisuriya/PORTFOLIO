@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 
 export default function CustomCursor() {
   const [mousePosition, setMousePosition] = useState({ x: -100, y: -100 });
-  const [isHovered, setIsHovered] = useState(false);
   const [isPointer, setIsPointer] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -48,27 +47,27 @@ export default function CustomCursor() {
 
   return (
     <>
-      {/* Inner Glowing Center Dot */}
+      {/* Inner Center Dot */}
       <motion.div
-        className="fixed top-0 left-0 w-3 h-3 rounded-full bg-[#10b981] pointer-events-none z-[9999] mix-blend-screen shadow-[0_0_12px_#10b981]"
+        className="fixed top-0 left-0 w-2.5 h-2.5 rounded-full pointer-events-none z-[9999] shadow-sm shadow-black"
         animate={{
-          x: mousePosition.x - 6,
-          y: mousePosition.y - 6,
-          scale: isPointer ? 1.5 : 1,
-          backgroundColor: isPointer ? '#34d399' : '#10b981',
+          x: mousePosition.x - 5,
+          y: mousePosition.y - 5,
+          scale: isPointer ? 1.6 : 1,
+          backgroundColor: isPointer ? '#FFFFFF' : '#CCD0CF',
         }}
         transition={{ type: 'spring', stiffness: 1000, damping: 50, mass: 0.1 }}
       />
 
-      {/* Outer Spring Follower Ring */}
+      {/* Outer Follower Ring */}
       <motion.div
-        className="fixed top-0 left-0 w-9 h-9 rounded-full border border-[#34d399]/70 bg-[#10b981]/10 backdrop-blur-[0.5px] pointer-events-none z-[9998] shadow-[0_0_20px_rgba(16,185,129,0.3)]"
+        className="fixed top-0 left-0 w-8 h-8 rounded-full border border-[#4A5C6A]/70 bg-[#252745]/20 backdrop-blur-[0.5px] pointer-events-none z-[9998] shadow-sm"
         animate={{
-          x: mousePosition.x - 18,
-          y: mousePosition.y - 18,
-          scale: isPointer ? 1.6 : 1,
-          borderColor: isPointer ? '#10b981' : 'rgba(52, 211, 153, 0.7)',
-          backgroundColor: isPointer ? 'rgba(16, 185, 129, 0.2)' : 'rgba(16, 185, 129, 0.08)',
+          x: mousePosition.x - 16,
+          y: mousePosition.y - 16,
+          scale: isPointer ? 1.5 : 1,
+          borderColor: isPointer ? '#CCD0CF' : 'rgba(155, 168, 171, 0.4)',
+          backgroundColor: isPointer ? 'rgba(37, 39, 69, 0.4)' : 'rgba(37, 39, 69, 0.15)',
         }}
         transition={{ type: 'spring', stiffness: 250, damping: 25, mass: 0.5 }}
       />

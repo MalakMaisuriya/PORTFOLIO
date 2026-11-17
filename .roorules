@@ -1,0 +1,64 @@
+# Roo Code Rules
+# (Mirrors .clinerules)
+
+## Tech Stack Overview
+- **Vite 8** + **React 19**
+- **Tailwind CSS v4** + PostCSS
+- **Three.js** (WebGL 3D background in Hero)
+- **Framer Motion 13** (Spring physics, scroll reveal, accordion animations)
+- **Oxlint** (Fast JavaScript/JSX linter)
+- **AAS (Agentic Awesome Skills)**: Comprehensive local skill library with 2,980+ specialized agent skills in `.agent/skills/skills/`.
+
+---
+
+## Active Theme Palette
+- Deep Midnight Base: `#06141B`
+- Dark Slate Navy (Cards & Panels): `#11212D`
+- Twilight Accent (Badges & Secondary): `#252745`
+- Steel Gray (Borders & Outlines): `#4A5C6A`
+- Silver Mist (Muted Text & Descriptions): `#9BA8AB`
+- Pale Frost White (Headings & Primary Highlights): `#CCD0CF`
+
+---
+
+## Agentic Awesome Skills (AAS) Integration
+The project embeds the official `agentic-awesome-skills` repository under `.agent/skills/`.
+When performing engineering tasks, consult the corresponding AAS playbooks:
+- **Frontend & Web Apps**: `.agent/skills/skills/clean-code/`, `.agent/skills/skills/code-showcase-react-ui-patterns/`
+- **Animation & 60fps Performance**: `.agent/skills/skills/animation-performance/` (Emil Kowalski rules: animate `transform` and `opacity`, avoid `transition: all`)
+- **SEO & Search Indexing**: `.agent/skills/skills/frontend-seo/` (JSON-LD schema, canonical URLs, Open Graph)
+- **Accessibility**: `.agent/skills/skills/better-accessibility/`, `.agent/skills/skills/accessibility-compliance-accessibility-audit/`
+- **Systematic Debugging**: `.agent/skills/skills/systematic-debugging/`
+
+---
+
+## Non-Negotiable Coding Rules
+
+1. **Zero Lint Warnings**:
+   - Every file must pass `npm run lint` cleanly.
+   - Never leave unused variables, unused imports, or dead code.
+   - If an unused argument is required by a signature, prefix it with `_`.
+
+2. **Three.js Lifecycle Management**:
+   - Whenever creating a Three.js scene (`Scene`, `PerspectiveCamera`, `WebGLRenderer`):
+     - Cache geometry and material references.
+     - In the cleanup return function of `useEffect`:
+       - `renderer.dispose()`
+       - `geometry.dispose()`
+       - `material.dispose()`
+       - `cancelAnimationFrame(animationFrameId)`
+       - Detach window resize event listeners.
+
+3. **Animation Performance (Emil Kowalski AAS Standards)**:
+   - Prefer animating `transform` and `opacity`.
+   - Never use `transition: all`. List explicit properties (`transform`, `opacity`, `background-color`, `border-color`).
+   - Use `requestAnimationFrame` for continuous canvas rendering loops.
+
+4. **Component Design**:
+   - Keep components modular in `src/components/`.
+   - Dynamic data should reside in `src/data/portfolioData.js`.
+   - Always include descriptive `aria-label` on buttons and external links (`rel="noopener noreferrer"`).
+
+5. **Validation Checklist Before Any Commit**:
+   - `npm run lint` must pass with 0 errors, 0 warnings.
+   - `npm run build` must complete successfully.

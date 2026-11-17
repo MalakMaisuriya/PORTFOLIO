@@ -7,7 +7,12 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "oxlint",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "gsd:verify": "npm run lint && npm run build",
+    "ralph": "powershell -ExecutionPolicy Bypass -File ./ralph.ps1",
+    "ralph:verify": "powershell -ExecutionPolicy Bypass -File ./ralph.ps1 -ValidateOnly",
+    "skills:count": "powershell -Command \"(Get-ChildItem -Path .agent/skills/skills -Directory).Count\"",
+    "skills:find": "powershell -Command \"Get-ChildItem -Path .agent/skills/skills -Directory -Filter ('*' + $args[0] + '*') | Select-Object -ExpandProperty Name\" --"
   },
   "dependencies": {
     "framer-motion": "^13.1.0",

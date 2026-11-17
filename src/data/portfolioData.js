@@ -11,11 +11,14 @@ export const personalDetails = {
     github: "https://github.com/MalakMaisuriya",
     linkedin: "https://in.linkedin.com/in/malak-maisuriya",
     hackerrank: "https://www.hackerrank.com/profile/MalakMaisuriya",
+    vercel: "https://vercel.com/malakmaisuriya857-5860s-projects/portfolio",
+    netlify: "https://malakmaisuriya-pr.netlify.app/",
   }
 };
 
 export const aboutData = {
-  watermark: "निरन्तरप्रयत्नेन सर्वं साध्यं भवति", // Continuous effort accomplishes all
+  watermark: "निरन्तरप्रयत्नेन सर्वं साध्यं भवति",
+  quoteTranslation: "Through continuous effort, everything is achievable",
   paragraphs: [
     "I am an ambitious Full Stack Developer who loves solving real-world challenges through code. My journey started with exploring computer applications at Vidhyadeep University, Surat, where I am currently in my BCA Final Year.",
     "I specialize in building responsive, high-performance web applications using the Full Stack MERN Ecosystem (MongoDB, Express.js, React JS, Node.js) and backend architecture.",
@@ -169,67 +172,6 @@ export const projectsData = [
   }
 ];
 
-export const processData = [
-  {
-    step: "01",
-    title: "Requirement & Analysis",
-    subtitle: "Understanding Scope",
-    description: "Breaking down complex project requirements, wireframing user flows, and planning the optimal frontend and backend architecture.",
-    icon: "FaLightbulb"
-  },
-  {
-    step: "02",
-    title: "Architecture & Design",
-    subtitle: "Responsive UI & Structure",
-    description: "Crafting modern, accessible user interfaces and structuring reusable React component hierarchies with tailored styling.",
-    icon: "FaDraftingCompass"
-  },
-  {
-    step: "03",
-    title: "Clean Code Development",
-    subtitle: "State & API Integration",
-    description: "Implementing state management, writing modular code, and seamlessly connecting REST APIs while adhering to performance best practices.",
-    icon: "FaLaptopCode"
-  },
-  {
-    step: "04",
-    title: "Optimization & Deployment",
-    subtitle: "Testing & Hosting",
-    description: "Conducting cross-device testing, optimizing build assets, and deploying production builds to platforms like Vercel and Netlify.",
-    icon: "FaRocket"
-  }
-];
-
-export const blogsData = [
-  {
-    id: 1,
-    title: "Architecting Reusable Component Libraries in React",
-    date: "AUG 2026",
-    category: "React Architecture",
-    readTime: "5 min read",
-    summary: "Best practices for building modular, clean, and scalable React components that increase codebase maintainability.",
-    link: "https://github.com/MalakMaisuriya/REACT"
-  },
-  {
-    id: 2,
-    title: "Transitioning to MERN: Building Robust RESTful APIs",
-    date: "JUL 2026",
-    category: "MERN Stack",
-    readTime: "7 min read",
-    summary: "Key principles for structuring Express routes, Node middleware, and MongoDB schemas for full-stack applications.",
-    link: "https://github.com/MalakMaisuriya/MERN"
-  },
-  {
-    id: 3,
-    title: "Mastering C++ DSA: Thinking Algorithmic for Frontend Roles",
-    date: "JUN 2026",
-    category: "DSA & Problem Solving",
-    readTime: "4 min read",
-    summary: "How solving C++ data structure problems on HackerRank strengthens core analytical reasoning in software development.",
-    link: "https://github.com/MalakMaisuriya/DSA"
-  }
-];
-
 export const educationData = [
   {
     institution: "Vidhyadeep University",
@@ -281,7 +223,8 @@ export const courseModulesData = [
     status: "Completed",
     category: "Frontend",
     icon: "FaBootstrap",
-    description: "Responsive grid layouts using Bootstrap framework, cross-browser compatibility, DOM manipulation with jQuery, and UI component styling."
+    description: "Responsive grid layouts using Bootstrap framework, cross-browser compatibility, DOM manipulation with jQuery, and UI component styling.",
+    topics: ["Bootstrap 5 Grid", "Components", "jQuery Selectors", "DOM Manipulation", "Event Handling"]
   },
   {
     id: 2,
@@ -291,7 +234,8 @@ export const courseModulesData = [
     status: "Completed",
     category: "Career & Soft Skills",
     icon: "FaUserGraduate",
-    description: "Technical interview preparation, resume building, freelance platform navigation, corporate communication, and soft skills training."
+    description: "Technical interview preparation, resume building, freelance platform navigation, corporate communication, and soft skills training.",
+    topics: ["Interview Prep", "Resume Building", "Freelancing Basics", "Tech Communication", "Mock Interviews"]
   },
   {
     id: 3,
@@ -301,7 +245,8 @@ export const courseModulesData = [
     status: "Completed",
     category: "Programming",
     icon: "SiC",
-    description: "Core logic building, variables, conditional statements, control loops, arrays, pointers, functions, memory management, and file handling in C."
+    description: "Core logic building, variables, conditional statements, control loops, arrays, pointers, functions, memory management, and file handling in C.",
+    topics: ["Syntax & Operators", "Control Flow", "Functions", "Pointers", "Memory Management"]
   },
   {
     id: 4,
@@ -311,7 +256,8 @@ export const courseModulesData = [
     status: "Completed",
     category: "Frontend",
     icon: "FaHtml5",
-    description: "Semantic HTML5 tags, CSS Flexbox and Grid layouts, CSS3 animations, media queries, mobile-first web page responsiveness, and W3C standards."
+    description: "Semantic HTML5 tags, CSS Flexbox and Grid layouts, CSS3 animations, media queries, mobile-first web page responsiveness, and W3C standards.",
+    topics: ["Semantic HTML", "Flexbox & Grid", "CSS3 Transitions", "Media Queries", "Responsive Layouts"]
   },
   {
     id: 5,
@@ -320,8 +266,9 @@ export const courseModulesData = [
     instructorBatch: "RAKESH-GIM_ANIMAT",
     status: "Completed",
     category: "Design & UI",
-    icon: "SiAdobe",
-    description: "2D vector graphics creation, timeline keyframe animations, interactive banner design, and digital web asset styling."
+    icon: "FaPaintBrush",
+    description: "2D vector graphics creation, timeline keyframe animations, interactive banner design, and digital web asset styling.",
+    topics: ["Vector Tools", "Keyframe Animation", "Timeline Controls", "Web Banners", "Asset Export"]
   },
   {
     id: 6,
@@ -330,8 +277,9 @@ export const courseModulesData = [
     instructorBatch: "RAKESH-GIM_PHOTOS",
     status: "Completed",
     category: "Design & UI",
-    icon: "SiAdobephotoshop",
-    description: "UI/UX mockup design, image manipulation, web banner graphics, vector typography, layer compositing, and digital asset export."
+    icon: "FaPalette",
+    description: "UI/UX mockup design, image manipulation, web banner graphics, vector typography, layer compositing, and digital asset export.",
+    topics: ["Layer Management", "UI Mockups", "Photo Editing", "Web Typography", "Digital Assets"]
   },
   {
     id: 7,
@@ -341,7 +289,8 @@ export const courseModulesData = [
     status: "Completed",
     category: "DSA & Logic",
     icon: "SiCplusplus",
-    description: "Arrays, vectors, stacks, queues, linked lists, recursion, searching and sorting algorithms, time & space complexity optimization in C++."
+    description: "Arrays, vectors, stacks, queues, linked lists, recursion, searching and sorting algorithms, time & space complexity optimization in C++.",
+    topics: ["Vectors & Arrays", "Stacks & Queues", "Linked Lists", "Sorting & Searching", "Time Complexity"]
   },
   {
     id: 8,
@@ -351,7 +300,8 @@ export const courseModulesData = [
     status: "Completed",
     category: "Frontend",
     icon: "FaJsSquare",
-    description: "Modern ES6+ syntax, arrow functions, promises, async/await, fetch API, local storage, DOM events, and object-oriented programming."
+    description: "Modern ES6+ syntax, arrow functions, promises, async/await, fetch API, local storage, DOM events, and object-oriented programming.",
+    topics: ["ES6+ Syntax", "Async/Await", "Promises", "Fetch API", "DOM & Storage"]
   },
   {
     id: 9,
@@ -361,7 +311,8 @@ export const courseModulesData = [
     status: "Completed",
     category: "Backend MERN",
     icon: "FaNodeJs",
-    description: "Server-side architecture, RESTful API development, Express routing, Mongoose ORM, MongoDB database modeling, middleware, and JWT authentication."
+    description: "Server-side architecture, RESTful API development, Express routing, Mongoose ORM, MongoDB database modeling, middleware, and JWT authentication.",
+    topics: ["Express Routing", "MongoDB & Mongoose", "REST APIs", "Middleware", "Authentication"]
   },
   {
     id: 10,
@@ -371,7 +322,8 @@ export const courseModulesData = [
     status: "Completed",
     category: "Career & Soft Skills",
     icon: "FaLanguage",
-    description: "Corporate verbal & written communication, professional email writing, presentation skills, and active listening for tech environments."
+    description: "Corporate verbal & written communication, professional email writing, presentation skills, and active listening for tech environments.",
+    topics: ["Verbal Skills", "Email Etiquette", "Presentations", "Technical Vocabulary", "Listening Skills"]
   },
   {
     id: 11,
@@ -381,127 +333,8 @@ export const courseModulesData = [
     status: "Completed",
     category: "Frontend",
     icon: "FaReact",
-    description: "Component hierarchy, props & state management, custom React hooks, Redux Toolkit, React Router DOM, API integration, and single-page apps."
-  }
-];
-
-export const repoDeepDivesData = [
-  {
-    repoName: "MERN",
-    url: "https://github.com/MalakMaisuriya/MERN",
-    title: "Full Stack MERN Architecture Suite",
-    language: "JavaScript / EJS / Node",
-    stars: "Active",
-    forks: "Public",
-    description: "Production-oriented full-stack backend and frontend repository. Structures Express routing, EJS templating, MongoDB Schema validation, REST API endpoints, and middleware auth.",
-    highlights: [
-      "Modular Express route controllers & error handling middleware",
-      "MongoDB database connection via Mongoose ORM",
-      "Server-Side Rendering with EJS & RESTful API endpoints",
-      "JWT Authentication & password hashing flow"
-    ]
-  },
-  {
-    repoName: "REACT",
-    url: "https://github.com/MalakMaisuriya/REACT",
-    title: "React & Redux State Management Hub",
-    language: "React JS / Redux / CSS3",
-    stars: "Active",
-    forks: "Public",
-    description: "Component library and state management repository featuring custom React hooks, Redux Toolkit slices, context providers, API fetching, and dynamic router navigation.",
-    highlights: [
-      "Custom React Hooks for async API calls & local storage state",
-      "Global state management with Redux Toolkit slices",
-      "Reusable component hierarchy with styled layouts",
-      "Firebase authentication & cloud integration"
-    ]
-  },
-  {
-    repoName: "HTML-CSS",
-    url: "https://github.com/MalakMaisuriya/HTML-CSS",
-    title: "HTML5 & Modern CSS3 Design Templates",
-    language: "HTML5 / CSS3 / Bootstrap",
-    stars: "Active",
-    forks: "Public",
-    description: "Collection of high-performance responsive web layouts, custom CSS animations, CSS Grid & Flexbox templates, accessibility standards, and clean UI components.",
-    highlights: [
-      "Mobile-first responsive layouts with CSS Grid & Flexbox",
-      "Custom CSS keyframe animations & glassmorphism utilities",
-      "Semantic HTML5 structure following W3C standards",
-      "Bootstrap 5 utility integration for quick UI prototyping"
-    ]
-  },
-  {
-    repoName: "JAVASCRIPT",
-    url: "https://github.com/MalakMaisuriya/JAVASCRIPT",
-    title: "JavaScript ES6+ & Asynchronous Web Apps",
-    language: "JavaScript (ES6+)",
-    stars: "Active",
-    forks: "Public",
-    description: "Curated JavaScript projects covering modern ES6+ syntax, Promises, Async/Await API handling, DOM event manipulation, OOP classes, and web applications.",
-    highlights: [
-      "Asynchronous JS handling using Async/Await & Fetch API",
-      "Dynamic DOM tree manipulation & interactive event handlers",
-      "Object-Oriented Programming (OOP) & ES6+ Modules",
-      "Local storage data persistence & JSON serialization"
-    ]
-  },
-  {
-    repoName: "DSA",
-    url: "https://github.com/MalakMaisuriya/DSA",
-    title: "C++ Data Structures & Algorithmic Solutions",
-    language: "C++ / Algorithms",
-    stars: "Active",
-    forks: "Public",
-    description: "Comprehensive C++ problem-solving suite for HackerRank and technical coding assessments covering data structures, algorithmic time complexity, and optimization.",
-    highlights: [
-      "Vectors, Stacks, Queues, Linked Lists & Trees in C++",
-      "Sorting & Searching algorithms (Binary Search, Quick Sort)",
-      "Time & Space Complexity analysis (Big-O notation)",
-      "HackerRank algorithmic challenge implementations"
-    ]
-  }
-];
-
-export const experienceData = [
-  {
-    role: "Full Stack Development Trainee",
-    company: "Red & White Multimedia Education",
-    period: "2024 – Present",
-    type: "Professional Training",
-    location: "Surat, Gujarat",
-    description: "Enrolled in an intensive Full Stack MERN development program. Building full-stack web applications, mastering REST API design, MongoDB modeling, and React frontend architecture.",
-    achievements: [
-      "Engineered multiple REST APIs using Node.js & Express.js",
-      "Designed responsive React JS client applications with custom hooks",
-      "Built MongoDB database schemas with indexes & validation rules"
-    ]
-  },
-  {
-    role: "BCA Computer Science Student & Developer",
-    company: "Vidhyadeep University",
-    period: "2022 – Present (Sem 5)",
-    type: "Academic & Projects",
-    location: "Surat, Gujarat",
-    description: "Pursuing Bachelor of Computer Applications (BCA Final Year). Leading peer academic projects, studying Database Management Systems, Software Engineering, and C++ OOP.",
-    achievements: [
-      "Created Student Management System UI for academic showcase",
-      "Consistently scored top marks in Web Technologies and C++ programming",
-      "Organized student coding peer groups for DSA problem solving"
-    ]
-  },
-  {
-    role: "Open Source & Practice Contributor",
-    company: "GitHub & HackerRank",
-    period: "2023 – Present",
-    type: "Self-Driven",
-    location: "Online",
-    description: "Actively developing and maintaining 15+ public GitHub repositories covering Full Stack MERN, React JS, JavaScript ES6+, HTML/CSS, and C++ algorithms.",
-    achievements: [
-      "Maintained 15+ public GitHub repositories with clean documentation",
-      "Regularly practicing C++ DSA algorithmic challenges on HackerRank",
-      "Deployed live web demos on Netlify and Vercel"
-    ]
+    description: "Component hierarchy, props & state management, custom React hooks, Redux Toolkit, React Router DOM, API integration, and single-page apps.",
+    topics: ["Components & Props", "React Hooks", "Redux Toolkit", "React Router", "API Integration"]
   }
 ];
 
@@ -512,7 +345,6 @@ export const codingProfilesData = [
     stat: "15+ Repositories",
     substat: "MERN, React, JS, HTML/CSS, DSA",
     link: "https://github.com/MalakMaisuriya",
-    color: "from-slate-800 to-slate-900 border-slate-700",
     badge: "Active Repos"
   },
   {
@@ -521,7 +353,6 @@ export const codingProfilesData = [
     stat: "C++ & Problem Solving",
     substat: "Algorithmic Challenges & Logic",
     link: "https://www.hackerrank.com/profile/MalakMaisuriya",
-    color: "from-emerald-950 to-slate-900 border-emerald-500/30",
     badge: "C++ Badge"
   },
   {
@@ -530,53 +361,14 @@ export const codingProfilesData = [
     stat: "Aspiring Developer",
     substat: "Surat, Gujarat, India",
     link: "https://in.linkedin.com/in/malak-maisuriya",
-    color: "from-blue-950 to-slate-900 border-blue-500/30",
     badge: "Professional"
   },
   {
-    platform: "Netlify",
-    handle: "malakmaisuriya-pr",
-    stat: "Live Web Demos",
-    substat: "Deployed Production Demos",
-    link: "https://malakmaisuriya-pr.netlify.app/",
-    color: "from-teal-950 to-slate-900 border-teal-500/30",
-    badge: "Hosted Projects"
+    platform: "Vercel",
+    handle: "malakmaisuriya857",
+    stat: "Production Deployments",
+    substat: "Live Portfolio & Web Apps",
+    link: "https://vercel.com/malakmaisuriya857-5860s-projects/portfolio",
+    badge: "Cloud Hosting"
   }
 ];
-
-export const faqData = [
-  {
-    question: "What primary technologies do you use for full-stack web development?",
-    answer: "My core tech stack revolves around the MERN ecosystem: MongoDB for database storage, Express.js and Node.js for backend APIs, and React JS with modern CSS/Tailwind for responsive frontends. I also write core logic in JavaScript (ES6+) and C++."
-  },
-  {
-    question: "Are you available for Full-Time Junior Full Stack or React Developer roles?",
-    answer: "Yes! As a BCA Final Year student (Sem 5) completing my Full Stack Development training at Red & White Multimedia, I am actively seeking Junior Full Stack Developer, Frontend React Developer, or Web Developer entry-level roles and internships."
-  },
-  {
-    question: "Can I inspect your project source code on GitHub?",
-    answer: "Absolutely. All my key repositories (MERN, REACT, HTML-CSS, JAVASCRIPT, DSA) are completely open and public on my GitHub profile: https://github.com/MalakMaisuriya."
-  },
-  {
-    question: "How do you ensure your web applications are responsive across devices?",
-    answer: "I adopt a mobile-first design strategy, writing structured HTML5 with modern CSS3 (Flexbox and Grid) and utility-first Tailwind CSS. All components undergo testing across phone, tablet, and desktop viewports."
-  },
-  {
-    question: "What is your approach to Data Structures and Algorithmic problem solving?",
-    answer: "I actively solve algorithmic logic problems in C++ on HackerRank. Practicing C++ vectors, pointers, stacks, queues, and sorting algorithms gives me deep insight into time/space complexity optimization."
-  }
-];
-
-export const testimonialsData = [
-  {
-    quote: "Malak is a remarkably dedicated learner who consistently writes clean, structured code and pays meticulous attention to both backend API architecture and frontend UI responsiveness.",
-    author: "Technical Instructor",
-    title: "Red & White Multimedia Education"
-  },
-  {
-    quote: "Working alongside Malak on computer science projects was a pleasure. His grasp of C++ data structures and willingness to help peers solve complex logic issues is outstanding.",
-    author: "BCA Batchmate",
-    title: "Vidhyadeep University, Surat"
-  }
-];
-

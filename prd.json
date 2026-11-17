@@ -1,0 +1,120 @@
+{
+  "project": "Modern Developer Portfolio",
+  "version": "1.0.0",
+  "lastUpdated": "2026-11-17",
+  "tasks": [
+    {
+      "id": "TASK-001",
+      "title": "Clean oxlint warnings and achieve zero-warning baseline",
+      "description": "Remove unused variables and imports in Projects.jsx (dotColor), Education.jsx (FaCertificate), and CustomCursor.jsx (isHovered).",
+      "priority": "HIGH",
+      "status": "completed",
+      "files": [
+        "src/components/Projects.jsx",
+        "src/components/Education.jsx",
+        "src/components/CustomCursor.jsx"
+      ],
+      "verificationCommand": "npm run lint",
+      "acceptanceCriteria": "npm run lint returns 0 warnings and 0 errors"
+    },
+    {
+      "id": "TASK-002",
+      "title": "Initialize GSD (Get Shit Done) spec framework",
+      "description": "Establish .gsd/ specification files (PROJECT.md, REQUIREMENTS.md, ROADMAP.md, STATE.md, COMMANDS.md).",
+      "priority": "HIGH",
+      "status": "completed",
+      "files": [
+        ".gsd/PROJECT.md",
+        ".gsd/REQUIREMENTS.md",
+        ".gsd/ROADMAP.md",
+        ".gsd/STATE.md",
+        ".gsd/COMMANDS.md"
+      ],
+      "verificationCommand": "Test-Path .gsd/COMMANDS.md",
+      "acceptanceCriteria": "All GSD specification files are created and consistent"
+    },
+    {
+      "id": "TASK-003",
+      "title": "Configure CodeRabbit AI review guidelines",
+      "description": "Add .coderabbit.yaml with React 19, Three.js, and Tailwind CSS v4 inspection guidelines.",
+      "priority": "MEDIUM",
+      "status": "completed",
+      "files": [
+        ".coderabbit.yaml"
+      ],
+      "verificationCommand": "Test-Path .coderabbit.yaml",
+      "acceptanceCriteria": ".coderabbit.yaml is properly formatted and valid YAML"
+    },
+    {
+      "id": "TASK-004",
+      "title": "Configure Roo Code custom modes and rules",
+      "description": "Create .roomodes, .roorules, and .clinerules defining Architect, Code, UI-Designer, Reviewer, and Test modes.",
+      "priority": "MEDIUM",
+      "status": "completed",
+      "files": [
+        ".roomodes",
+        ".roorules",
+        ".clinerules"
+      ],
+      "verificationCommand": "Test-Path .roomodes",
+      "acceptanceCriteria": ".roomodes JSON is valid and .clinerules exists"
+    },
+    {
+      "id": "TASK-005",
+      "title": "Build Ralph Loop autonomous runners",
+      "description": "Create ralph.ps1 and ralph.sh autonomous iteration scripts with prd.json integration.",
+      "priority": "HIGH",
+      "status": "completed",
+      "files": [
+        "ralph.ps1",
+        "ralph.sh",
+        "prompt.md",
+        "progress.txt"
+      ],
+      "verificationCommand": "powershell -ExecutionPolicy Bypass -File ./ralph.ps1 -ValidateOnly",
+      "acceptanceCriteria": "Runner executes dry-run validation successfully"
+    },
+    {
+      "id": "TASK-006",
+      "title": "Audit Three.js WebGL & orbital graphics in Hero.jsx",
+      "description": "Inspect Hero.jsx and confirm render graphics and orbital animations are lightweight and memory-safe.",
+      "priority": "MEDIUM",
+      "status": "completed",
+      "files": [
+        "src/components/Hero.jsx"
+      ],
+      "verificationCommand": "npm run build",
+      "acceptanceCriteria": "No unhandled memory leaks or missing disposal in rendering graphics"
+    },
+    {
+      "id": "TASK-007",
+      "title": "Update package.json with GSD and Ralph scripts",
+      "description": "Add gsd:verify, ralph, and ralph:verify scripts to package.json for developer ergonomics.",
+      "priority": "LOW",
+      "status": "completed",
+      "files": [
+        "package.json"
+      ],
+      "verificationCommand": "npm run gsd:verify",
+      "acceptanceCriteria": "npm run gsd:verify executes lint and build cleanly"
+    },
+    {
+      "id": "TASK-008",
+      "title": "Install and integrate Agentic Awesome Skills (AAS) library",
+      "description": "Clone sickn33/agentic-awesome-skills (2,881+ skills) into .agent/skills, link to rules (.clinerules, .roorules), apply frontend-seo and animation-performance to portfolio.",
+      "priority": "HIGH",
+      "status": "completed",
+      "files": [
+        ".agent/skills/",
+        ".gitignore",
+        ".clinerules",
+        ".roorules",
+        "index.html",
+        "src/index.css",
+        "package.json"
+      ],
+      "verificationCommand": "npm run skills:count",
+      "acceptanceCriteria": "skills:count returns 2881 and gsd:verify passes"
+    }
+  ]
+}

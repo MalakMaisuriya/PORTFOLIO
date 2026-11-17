@@ -1,14 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --background: #061412;
-  --foreground: #e6f7f2;
-  --card: #0b211e;
-  --card-foreground: #e6f7f2;
-  --primary: #10b981;
-  --accent: #34d399;
-  --muted-foreground: #72b09e;
-  --border: #193d37;
+  --background: #06141B;
+  --foreground: #CCD0CF;
+  --card: #11212D;
+  --card-foreground: #CCD0CF;
+  --accent: #252745;
+  --border: #4A5C6A;
+  --muted: #9BA8AB;
 }
 
 @layer base {
@@ -17,13 +16,9 @@
   }
 
   body {
-    background-color: var(--background);
-    color: var(--foreground);
-    font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
-  }
-
-  h1, h2, h3, .font-serif-header {
-    font-family: 'Cormorant Garamond', serif;
+    background-color: #06141B;
+    color: #CCD0CF;
+    font-family: 'Inter', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   }
 }
 
@@ -32,7 +27,7 @@
   inset: 0;
   width: 100vw;
   height: 100vh;
-  opacity: 0.04;
+  opacity: 0.025;
   pointer-events: none;
   z-index: 99;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
@@ -43,72 +38,76 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #061412;
+  background: #06141B;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #193d37;
+  background: #252745;
   border-radius: 4px;
+  border: 1px solid #4A5C6A;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #10b981;
+  background: #4A5C6A;
 }
 
+/* Custom Palette Glass Panels */
 .glass-panel {
-  background: rgba(11, 33, 30, 0.85);
+  background: rgba(17, 33, 45, 0.75);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(25, 61, 55, 0.8);
+  border: 1px solid rgba(74, 92, 106, 0.35);
+  box-shadow: 0 8px 32px 0 rgba(6, 20, 27, 0.4);
 }
 
 .glass-panel-hover {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .glass-panel-hover:hover {
-  background: rgba(18, 51, 46, 0.95);
-  border-color: rgba(16, 185, 129, 0.6);
-  box-shadow: 0 12px 35px -10px rgba(16, 185, 129, 0.25);
-  transform: translateY(-4px);
+  background: rgba(25, 45, 60, 0.85);
+  border-color: rgba(155, 168, 171, 0.5);
+  box-shadow: 0 16px 40px -8px rgba(6, 20, 27, 0.6);
+  transform: translateY(-3px);
 }
 
-.text-gradient-teal {
-  background: linear-gradient(135deg, #ffffff 0%, #6ee7b7 40%, #10b981 100%);
+.text-gradient-main {
+  background: linear-gradient(135deg, #FFFFFF 0%, #CCD0CF 50%, #9BA8AB 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.text-gradient-gold {
-  background: linear-gradient(135deg, #ffffff 0%, #a7f3d0 40%, #34d399 100%);
+.text-gradient-subtle {
+  background: linear-gradient(135deg, #CCD0CF 0%, #9BA8AB 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.text-gradient-cyan {
-  background: linear-gradient(135deg, #ffffff 0%, #6ee7b7 40%, #10b981 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+/* Kern Society Typography & Marquee Utilities */
+.font-display {
+  font-family: 'Space Grotesk', 'Plus Jakarta Sans', system-ui, sans-serif;
 }
 
-@keyframes spin-slow {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.font-editorial {
+  font-family: 'Syne', 'Plus Jakarta Sans', system-ui, sans-serif;
 }
 
-@keyframes spin-reverse-slow {
-  from { transform: rotate(360deg); }
-  to { transform: rotate(0deg); }
+@keyframes ticker {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
 }
 
-.animate-spin-slow {
-  animation: spin-slow 50s linear infinite;
+.animate-ticker {
+  display: flex;
+  width: max-content;
+  animation: ticker 32s linear infinite;
+  will-change: transform;
 }
 
-.animate-spin-reverse-slow {
-  animation: spin-reverse-slow 60s linear infinite;
-}
-
-.animate-pulse-slow {
-  animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+.animate-ticker:hover {
+  animation-play-state: paused;
 }

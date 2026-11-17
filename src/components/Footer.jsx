@@ -8,60 +8,60 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative bg-[#091313] border-t border-[#193d37] pt-16 pb-12 text-[#72b09e]">
+    <footer className="relative bg-transparent border-t border-[#4A5C6A]/30 pt-14 pb-10 text-[#9BA8AB]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8 pb-12 border-b border-[#193d37]">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-[#4A5C6A]/30">
           
           {/* Brand Logo */}
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#10b981] to-[#34d399] flex items-center justify-center text-[#061412] font-extrabold shadow-lg">
-              <FaCode className="text-xl" />
+            <div className="w-9 h-9 rounded-xl bg-[#11212D] border border-[#4A5C6A] flex items-center justify-center text-[#CCD0CF] font-bold shadow-md">
+              <FaCode className="text-base" />
             </div>
             <div>
-              <span className="text-xl font-bold text-[#e6f7f2] tracking-tight">
-                Malak <span className="text-[#34d399]">Maisuriya</span>
+              <span className="text-base font-bold text-[#CCD0CF] tracking-tight">
+                Malak Maisuriya
               </span>
-              <p className="text-xs text-[#72b09e]">Full Stack MERN Developer • BCA Sem 5</p>
+              <p className="text-[11px] text-[#9BA8AB]">Full-Stack Web Developer</p>
             </div>
           </div>
 
           {/* Social Links */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3">
             <a
               href={personalDetails.socials.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 rounded-full bg-[#0b211e] border border-[#193d37] text-white hover:text-[#10b981] hover:border-[#10b981] transition-colors shadow-md"
+              className="p-2.5 rounded-xl bg-[#11212D] border border-[#4A5C6A] text-[#CCD0CF] hover:bg-[#252745] hover:border-[#9BA8AB] transition-all"
               aria-label="GitHub"
             >
-              <FaGithub className="text-lg text-white" />
+              <FaGithub className="text-base" />
             </a>
             <a
               href={personalDetails.socials.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-3 rounded-full bg-[#0b211e] border border-[#193d37] text-[#0A66C2] hover:text-sky-300 hover:border-[#0A66C2] transition-colors shadow-md"
+              className="p-2.5 rounded-xl bg-[#11212D] border border-[#4A5C6A] text-[#0A66C2] hover:bg-[#252745] hover:border-[#9BA8AB] transition-all"
               aria-label="LinkedIn"
             >
-              <FaLinkedin className="text-lg text-[#0A66C2]" />
+              <FaLinkedin className="text-base" />
             </a>
             <button
               onClick={scrollToTop}
-              className="p-3 rounded-full bg-[#10b981]/15 border border-[#10b981]/40 text-[#10b981] hover:bg-[#10b981] hover:text-[#061412] transition-all ml-2"
+              className="p-2.5 rounded-xl bg-[#11212D] border border-[#4A5C6A] text-[#CCD0CF] hover:bg-[#252745] hover:border-[#9BA8AB] transition-all cursor-pointer ml-1"
               title="Back to Top"
             >
-              <FaChevronUp className="text-sm" />
+              <FaChevronUp className="text-xs" />
             </button>
           </div>
 
         </div>
 
         {/* Bottom Credits */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-[#72b09e] gap-4">
+        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-[#9BA8AB] gap-3">
           <p>© {new Date().getFullYear()} Malak Maisuriya. All rights reserved.</p>
-          <p className="flex items-center gap-1">
-            Crafted with <FaHeart className="text-[#34d399] text-xs" /> using React, Tailwind CSS & Framer Motion
+          <p className="flex items-center gap-1.5">
+            Built with <FaHeart className="text-[#9BA8AB] text-[10px]" /> using React 19, Three.js & Tailwind CSS
           </p>
         </div>
 

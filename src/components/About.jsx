@@ -2,33 +2,17 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaGraduationCap, FaCertificate, FaCode, FaCheckCircle, FaCalendarAlt, FaMapMarkerAlt } from 'react-icons/fa';
 import { aboutData, educationData, certificationData } from '../data/portfolioData';
+import ScrollRevealText from './ScrollRevealText';
+import SpotlightCard from './SpotlightCard';
 
 export default function About() {
   return (
-    <section id="about" className="relative py-28 bg-[#061412] overflow-hidden">
-      <div className="absolute top-1/3 left-0 w-[550px] h-[550px] bg-[#10b981]/8 rounded-full blur-[170px] pointer-events-none -z-10" />
-      <div className="absolute bottom-10 right-0 w-[450px] h-[450px] bg-[#34d399]/8 rounded-full blur-[150px] pointer-events-none -z-10" />
-
-      {/* Continuous Running Background Animation (Dual Counter-Spinning Rings) */}
-      <div className="absolute top-1/2 -right-20 -translate-y-1/2 pointer-events-none opacity-25 hidden md:block z-0">
-        <div className="w-[500px] h-[500px] lg:w-[600px] lg:h-[600px] animate-spin-slow relative">
-          <svg viewBox="0 0 500 500" className="w-full h-full" fill="none">
-            <circle cx="250" cy="250" r="240" stroke="rgba(16,185,129,0.4)" strokeWidth="0.8" />
-            <circle cx="250" cy="250" r="190" stroke="rgba(52,211,153,0.3)" strokeWidth="0.6" strokeDasharray="6 6" />
-            <polygon points="250,10 450,420 50,420" stroke="rgba(16,185,129,0.35)" strokeWidth="0.6" fill="none" />
-            <circle cx="250" cy="10" r="5" fill="#10b981" />
-            <circle cx="450" cy="420" r="5" fill="#34d399" />
-          </svg>
-        </div>
-        <div className="w-[380px] h-[380px] lg:w-[460px] lg:h-[460px] animate-spin-reverse-slow absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-          <svg viewBox="0 0 400 400" className="w-full h-full" fill="none">
-            <circle cx="200" cy="200" r="180" stroke="rgba(52,211,153,0.35)" strokeWidth="0.8" strokeDasharray="4 8" />
-            <polygon points="200,390 30,80 370,80" stroke="rgba(16,185,129,0.3)" strokeWidth="0.6" fill="none" />
-          </svg>
-        </div>
-      </div>
+    <section id="about" className="relative py-24 bg-transparent overflow-hidden">
+      <div className="absolute top-1/3 left-0 w-[500px] h-[500px] bg-[#11212D]/40 rounded-full blur-[160px] pointer-events-none -z-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -36,119 +20,120 @@ export default function About() {
           transition={{ duration: 0.6 }}
           className="text-center space-y-3 mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#10b981]/10 border border-[#10b981]/30 text-[#10b981] text-xs font-mono tracking-[0.25em] uppercase">
-            <span>◆ ABOUT ME ◆</span>
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#11212D] border border-[#4A5C6A]/50 text-[#CCD0CF] text-xs font-mono tracking-wider uppercase font-semibold">
+            <span className="text-[#9BA8AB]">[ 03 // PROFILE ]</span>
+            <span>BACKGROUND & EXPERTISE</span>
           </div>
-          <h2 className="font-serif italic text-3xl sm:text-5xl font-normal text-gradient-teal tracking-tight">
-            The Mind Behind The Code
-          </h2>
-          <div className="w-16 h-1 bg-gradient-to-r from-[#10b981] to-[#34d399] mx-auto rounded-full mt-3" />
+          <ScrollRevealText
+            text="Engineering & Bio"
+            as="h2"
+            split="words"
+            className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#CCD0CF] tracking-tighter uppercase font-display block"
+          />
+          <div className="w-12 h-1 bg-[#4A5C6A] mx-auto rounded-full mt-2" />
         </motion.div>
 
+        {/* Sanskrit Watermark Quote */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="relative py-4 mb-16 overflow-hidden border-y border-[#193d37] bg-[#0b211e]/80 text-center"
+          className="relative py-4 mb-16 overflow-hidden border-y border-[#4A5C6A]/30 bg-[#11212D]/40 text-center"
         >
-          <p className="font-serif italic text-lg sm:text-2xl text-[#34d399] tracking-widest font-normal">
+          <p className="italic text-base sm:text-xl text-[#CCD0CF] tracking-wide font-normal">
             "{aboutData.watermark}"
           </p>
-          <p className="text-[11px] uppercase tracking-widest text-[#72b09e] font-mono mt-1">
-            (Through continuous effort, everything is achievable)
+          <p className="text-[11px] uppercase tracking-widest text-[#9BA8AB] font-mono mt-1">
+            Through continuous effort, everything is achievable
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start mb-20">
 
+          {/* Profile Card with Spotlight */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
+            initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="lg:col-span-5 flex justify-center"
+            transition={{ duration: 0.6 }}
+            className="lg:col-span-5 flex justify-center w-full"
           >
-            <div className="relative w-full max-w-sm">
-              <div className="absolute -top-3 -left-3 w-10 h-10 border-l-2 border-t-2 border-[#10b981] rounded-tl-lg pointer-events-none z-20" />
-              <div className="absolute -top-3 -right-3 w-10 h-10 border-r-2 border-t-2 border-[#10b981] rounded-tr-lg pointer-events-none z-20" />
-              <div className="absolute -bottom-3 -left-3 w-10 h-10 border-l-2 border-b-2 border-[#10b981] rounded-bl-lg pointer-events-none z-20" />
-              <div className="absolute -bottom-3 -right-3 w-10 h-10 border-r-2 border-b-2 border-[#10b981] rounded-br-lg pointer-events-none z-20" />
+            <div className="w-full max-w-sm">
+              <SpotlightCard className="p-6 space-y-5">
+                <div className="w-16 h-16 rounded-xl bg-[#252745] border border-[#4A5C6A] flex items-center justify-center text-[#CCD0CF] shadow-inner">
+                  <FaCode className="text-2xl" />
+                </div>
 
-              <div className="relative rounded-2xl overflow-hidden glass-panel p-2 shadow-2xl border border-[#193d37] group">
-                <div className="h-88 sm:h-96 w-full rounded-xl bg-gradient-to-b from-[#0b211e] to-[#061412] flex flex-col items-center justify-center p-8 text-center relative overflow-hidden">
-                  
-                  <svg viewBox="0 0 200 200" className="absolute inset-0 w-full h-full opacity-10 pointer-events-none stroke-[#10b981]">
-                    <circle cx="100" cy="100" r="80" strokeWidth="0.5" fill="none" />
-                    <polygon points="100,20 170,160 30,160" strokeWidth="0.5" fill="none" />
-                  </svg>
-
-                  <div className="w-24 h-24 rounded-full bg-[#10b981]/15 border-2 border-[#10b981]/40 flex items-center justify-center mb-6 text-[#10b981] group-hover:scale-110 transition-transform duration-500 shadow-lg">
-                    <FaCode className="text-4xl text-[#10b981]" />
-                  </div>
-
-                  <h3 className="font-serif text-3xl font-normal text-[#e6f7f2] mb-1">
+                <div>
+                  <h3 className="text-2xl font-bold text-[#CCD0CF]">
                     Malak Maisuriya
                   </h3>
-                  <p className="text-xs text-[#34d399] uppercase font-mono tracking-widest font-semibold px-4 py-1 rounded-full bg-[#34d399]/10 border border-[#34d399]/30">
-                    BCA Sem 5 • Surat
-                  </p>
-
-                  <div className="w-12 h-0.5 bg-[#10b981]/30 my-4" />
-
-                  <p className="text-xs text-[#72b09e] max-w-xs font-normal">
-                    Aspiring Full Stack Web Developer & Algorithmic Problem Solver
+                  <p className="text-xs text-[#9BA8AB] uppercase font-mono tracking-wider mt-1">
+                    BCA Sem 5 • Surat, India
                   </p>
                 </div>
-              </div>
 
+                <div className="w-full h-px bg-[#4A5C6A]/40" />
+
+                <p className="text-xs sm:text-sm text-[#9BA8AB] leading-relaxed">
+                  Full-Stack Web Developer passionate about building robust applications with clean code, elegant architecture, and seamless user experiences.
+                </p>
+
+                <div className="pt-2">
+                  <span className="inline-block text-[11px] font-mono px-3 py-1 rounded-full bg-[#252745] border border-[#4A5C6A] text-[#CCD0CF]">
+                    MERN & C++ DSA
+                  </span>
+                </div>
+              </SpotlightCard>
             </div>
           </motion.div>
 
+          {/* Biography & Metrics */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
+            initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
+            transition={{ duration: 0.6 }}
             className="lg:col-span-7 space-y-6"
           >
             <div className="space-y-4">
-              <h3 className="font-serif text-3xl font-light text-[#e6f7f2] leading-snug">
-                Building Modern Web Solutions with <span className="font-serif italic font-normal text-[#10b981]">Passion & Precision</span>
+              <h3 className="text-2xl sm:text-3xl font-bold text-[#CCD0CF] leading-snug">
+                Building Scalable Solutions with <span className="text-[#9BA8AB]">Engineering Precision</span>
               </h3>
               
               {aboutData.paragraphs.map((para, i) => (
-                <p key={i} className="text-[#72b09e] text-base sm:text-lg leading-relaxed font-normal">
+                <p key={i} className="text-[#9BA8AB] text-sm sm:text-base leading-relaxed font-normal">
                   {para}
                 </p>
               ))}
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
               {aboutData.stats.map((stat, idx) => (
                 <div
                   key={idx}
-                  className="p-5 rounded-2xl glass-panel border border-[#193d37] hover:border-[#10b981]/50 transition-all text-center space-y-1"
+                  className="p-5 rounded-xl bg-[#11212D] border border-[#4A5C6A]/40 hover:border-[#9BA8AB]/50 transition-all text-center space-y-1"
                 >
-                  <div className="font-serif text-3xl sm:text-4xl font-normal text-gradient-gold">
+                  <div className="text-2xl sm:text-3xl font-bold text-[#CCD0CF]">
                     {stat.value}
                   </div>
-                  <div className="text-xs uppercase font-mono font-bold text-[#e6f7f2] tracking-wider">
+                  <div className="text-xs uppercase font-mono font-semibold text-[#CCD0CF] tracking-wider">
                     {stat.label}
                   </div>
-                  <div className="text-[11px] text-[#72b09e] font-normal">
+                  <div className="text-[11px] text-[#9BA8AB]">
                     {stat.detail}
                   </div>
                 </div>
               ))}
             </div>
 
-            <div className="pt-4 space-y-2.5">
-              <h4 className="text-xs uppercase font-mono tracking-widest text-[#34d399] font-semibold">
-                Highlights & Focus:
+            <div className="pt-2 space-y-2">
+              <h4 className="text-xs uppercase font-mono tracking-wider text-[#CCD0CF] font-semibold">
+                Core Strengths:
               </h4>
               {aboutData.achievements.map((item, idx) => (
-                <div key={idx} className="flex items-start gap-3 text-[#e6f7f2] text-sm">
-                  <FaCheckCircle className="text-[#10b981] text-sm shrink-0 mt-1" />
+                <div key={idx} className="flex items-start gap-2.5 text-[#9BA8AB] text-xs sm:text-sm">
+                  <FaCheckCircle className="text-[#CCD0CF] text-xs shrink-0 mt-1" />
                   <span>{item}</span>
                 </div>
               ))}
@@ -158,35 +143,37 @@ export default function About() {
 
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+        {/* Education & Certification Section */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
+          {/* Academic Timeline */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="space-y-6"
+            transition={{ duration: 0.5 }}
+            className="space-y-5"
           >
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-2xl bg-[#10b981]/15 border border-[#10b981]/30 flex items-center justify-center text-[#10b981]">
-                <FaGraduationCap className="text-2xl" />
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 rounded-xl bg-[#11212D] border border-[#4A5C6A] flex items-center justify-center text-[#CCD0CF]">
+                <FaGraduationCap className="text-lg" />
               </div>
               <div>
-                <h3 className="font-serif text-3xl font-normal text-[#e6f7f2]">
-                  Academic Timeline
+                <h3 className="text-xl font-bold text-[#CCD0CF]">
+                  Academic Journey
                 </h3>
-                <p className="text-xs font-mono uppercase text-[#72b09e] tracking-wider">Education & Qualification</p>
+                <p className="text-xs font-mono uppercase text-[#9BA8AB]">Education & Qualifications</p>
               </div>
             </div>
 
-            <div className="relative pl-6 border-l-2 border-[#193d37] space-y-8">
+            <div className="relative pl-5 border-l-2 border-[#4A5C6A]/40 space-y-6">
               {educationData.map((edu, idx) => (
                 <div key={idx} className="relative group">
-                  <div className={`absolute -left-[31px] top-1.5 w-4 h-4 rounded-full border-2 border-[#10b981] transition-colors ${edu.highlight ? 'bg-[#10b981]' : 'bg-[#061412]'}`} />
+                  <div className={`absolute -left-[27px] top-1.5 w-3.5 h-3.5 rounded-full border-2 border-[#4A5C6A] ${edu.highlight ? 'bg-[#CCD0CF]' : 'bg-[#11212D]'}`} />
                   
-                  <div className="glass-panel p-6 rounded-2xl border border-[#193d37] hover:border-[#10b981]/50 transition-all space-y-2">
-                    <div className="flex items-center justify-between text-xs text-[#72b09e] font-mono">
-                      <span className="flex items-center gap-1.5 text-[#10b981]">
+                  <div className="p-5 rounded-xl bg-[#11212D] border border-[#4A5C6A]/40 hover:border-[#9BA8AB]/50 transition-all space-y-2">
+                    <div className="flex items-center justify-between text-xs text-[#9BA8AB] font-mono">
+                      <span className="flex items-center gap-1.5 text-[#CCD0CF]">
                         <FaCalendarAlt className="text-[10px]" /> {edu.period}
                       </span>
                       <span className="flex items-center gap-1">
@@ -194,20 +181,20 @@ export default function About() {
                       </span>
                     </div>
 
-                    <h4 className="font-serif text-xl font-normal text-[#e6f7f2]">
+                    <h4 className="text-base font-bold text-[#CCD0CF]">
                       {edu.degree}
                     </h4>
 
-                    <div className="text-sm font-semibold text-[#34d399]">
+                    <div className="text-xs font-semibold text-[#9BA8AB]">
                       {edu.institution}
                     </div>
 
-                    <p className="text-[#72b09e] text-xs leading-relaxed">
+                    <p className="text-[#9BA8AB] text-xs leading-relaxed">
                       {edu.details}
                     </p>
 
-                    <div className="pt-2">
-                      <span className="inline-block text-[10px] uppercase font-mono font-semibold px-2.5 py-0.5 rounded-full bg-[#10b981]/10 border border-[#10b981]/30 text-[#10b981]">
+                    <div className="pt-1">
+                      <span className="inline-block text-[10px] uppercase font-mono px-2 py-0.5 rounded-md bg-[#252745] border border-[#4A5C6A]/60 text-[#CCD0CF]">
                         {edu.status}
                       </span>
                     </div>
@@ -217,54 +204,55 @@ export default function About() {
             </div>
           </motion.div>
 
+          {/* Professional Certification */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="space-y-6"
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="space-y-5"
           >
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-2xl bg-[#34d399]/15 border border-[#34d399]/30 flex items-center justify-center text-[#34d399]">
-                <FaCertificate className="text-2xl" />
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 rounded-xl bg-[#11212D] border border-[#4A5C6A] flex items-center justify-center text-[#CCD0CF]">
+                <FaCertificate className="text-lg" />
               </div>
               <div>
-                <h3 className="font-serif text-3xl font-normal text-[#e6f7f2]">
-                  Professional Training
+                <h3 className="text-xl font-bold text-[#CCD0CF]">
+                  Professional Certification
                 </h3>
-                <p className="text-xs font-mono uppercase text-[#72b09e] tracking-wider">Certification & Specialization</p>
+                <p className="text-xs font-mono uppercase text-[#9BA8AB]">Specialized Training</p>
               </div>
             </div>
 
-            <div className="relative pl-6 border-l-2 border-[#193d37] space-y-8">
+            <div className="relative pl-5 border-l-2 border-[#4A5C6A]/40 space-y-6">
               <div className="relative group">
-                <div className="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full border-2 border-[#34d399] bg-[#34d399]" />
+                <div className="absolute -left-[27px] top-1.5 w-3.5 h-3.5 rounded-full border-2 border-[#4A5C6A] bg-[#CCD0CF]" />
                 
-                <div className="glass-panel p-6 rounded-2xl border border-[#193d37] hover:border-[#34d399]/50 transition-all space-y-3">
-                  <div className="flex items-center justify-between text-xs text-[#72b09e] font-mono">
-                    <span className="flex items-center gap-1.5 text-[#34d399]">
+                <div className="p-5 rounded-xl bg-[#11212D] border border-[#4A5C6A]/40 hover:border-[#9BA8AB]/50 transition-all space-y-2.5">
+                  <div className="flex items-center justify-between text-xs text-[#9BA8AB] font-mono">
+                    <span className="flex items-center gap-1.5 text-[#CCD0CF]">
                       <FaCalendarAlt className="text-[10px]" /> {certificationData.period}
                     </span>
-                    <span className="px-2.5 py-0.5 rounded-full bg-[#34d399]/10 border border-[#34d399]/30 text-[#34d399] font-semibold text-[10px] uppercase">
+                    <span className="px-2 py-0.5 rounded-full bg-[#252745] border border-[#4A5C6A] text-[#CCD0CF] text-[10px] uppercase font-semibold">
                       {certificationData.badge}
                     </span>
                   </div>
 
-                  <h4 className="font-serif text-2xl font-normal text-[#e6f7f2]">
+                  <h4 className="text-base font-bold text-[#CCD0CF]">
                     {certificationData.title}
                   </h4>
 
-                  <div className="text-sm font-semibold text-[#10b981]">
+                  <div className="text-xs font-semibold text-[#9BA8AB]">
                     {certificationData.institute}
                   </div>
 
-                  <p className="text-[#72b09e] text-xs leading-relaxed">
+                  <p className="text-[#9BA8AB] text-xs leading-relaxed">
                     {certificationData.description}
                   </p>
 
-                  <div className="pt-2 flex flex-wrap gap-2">
+                  <div className="pt-2 flex flex-wrap gap-1.5">
                     {['MongoDB', 'Express.js', 'React.js', 'Node.js', 'REST APIs'].map((tech) => (
-                      <span key={tech} className="text-[10px] font-mono px-2 py-0.5 rounded-md bg-[#0b211e] border border-[#193d37] text-[#10b981]">
+                      <span key={tech} className="text-[10px] font-mono px-2 py-0.5 rounded-md bg-[#06141B] border border-[#4A5C6A]/60 text-[#CCD0CF]">
                         {tech}
                       </span>
                     ))}

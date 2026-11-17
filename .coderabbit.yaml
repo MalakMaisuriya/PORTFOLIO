@@ -1,0 +1,55 @@
+# CodeRabbit Configuration File
+# Documentation: https://docs.coderabbit.ai/guides/configure-coderabbit
+
+version: "2"
+language: "en-US"
+tone_instructions: "Be concise, analytical, and prioritize high-impact issues such as memory leaks, WebGL performance, and React rendering bottlenecks."
+
+reviews:
+  profile: "chill"
+  request_changes_workflow: false
+  high_level_summary: true
+  poem: false
+  review_status: true
+  collapse_walkthrough: false
+  auto_review:
+    enabled: true
+    drafts: false
+    base_branches:
+      - "main"
+      - "master"
+      - "develop"
+
+  path_filters:
+    - "!node_modules/**"
+    - "!dist/**"
+    - "!public/**"
+    - "!package-lock.json"
+    - "!**/*.lock"
+    - "!**/*.svg"
+    - "!**/*.png"
+    - "!**/*.jpg"
+
+  path_instructions:
+    - path: "src/components/**/*.jsx"
+      instructions: |
+        - Ensure all React 19 hooks adhere to React standards.
+        - Check for missing dependency arrays in useEffect/useCallback/useMemo.
+        - For Three.js canvases or WebGL instances: Ensure renderer, geometry, materials, and requestAnimationFrame loops are correctly disposed and cancelled on component unmount.
+        - For Framer Motion animations: Ensure layout animations use GPU-accelerated transforms (transform, opacity) rather than top/left/width/height where possible.
+        - Verify all interactive elements (buttons, external links) have descriptive `aria-label` or accessible names.
+        - When using external links, ensure `rel="noopener noreferrer"` and `target="_blank"` are present.
+
+    - path: "src/**/*.css"
+      instructions: |
+        - Ensure Tailwind CSS v4 compatibility.
+        - Avoid duplicate utility classes or conflicting flex/grid declarations.
+
+    - path: "src/data/**/*.js"
+      instructions: |
+        - Ensure object schemas remain strictly structured and match component consumption expectations.
+        - Validate that all external URLs and asset paths are valid and well-formed.
+
+chat:
+  auto_reply: true
+
